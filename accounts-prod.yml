@@ -2,7 +2,7 @@ build:
   version: "1.0"
 
 accounts:
-  message: "Welcome to MyBank accounts related prod APIs "
+  message: "Welcome to MyBank accounts related webhook prod APIs "
   contactDetails:
     name: "Ali Furkan Erguven - Developer"
     email: "{cipher}a3b0cc4caab3cab55c04816070888a21b52d9fc182ad9794ee7bfaafe303d81cee8b072997bba5a89b4cc26be4f289f2"
