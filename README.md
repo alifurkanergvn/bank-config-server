@@ -15,10 +15,10 @@ We are using this site(https://console.hookdeck.com/) for transforming localhost
   Run this command to download and install Scoop: **iwr -useb get.scoop.sh | iex**
   Run **scoop help** to see the list of Scoop commands and options.
 
-4- Run this on ypur terminal (**scoop bucket add hookdeck https://github.com/hookdeck/scoop-hookdeck-cli.git**) ,
+4- Run this on your terminal (**scoop bucket add hookdeck https://github.com/hookdeck/scoop-hookdeck-cli.git**) ,
   (**scoop install hookdeck**)
 
-5- (**hookdeck login --cli-key 31w5ha3ujmpdf9huuauuaqv42q67uzso3jnbob1hj54psy3yvq**)  
+5- (**hookdeck login --cli-key 31w5ha3ujmpdf9huuauuaqv42q67uzso3jnbob1hj54psy3**)  
 
 6- (hookdeck listen [port] Source)  --> (**hookdeck listen 8071 Source**)
 
@@ -28,3 +28,23 @@ We are using this site(https://console.hookdeck.com/) for transforming localhost
 
 8- Add created webhook url to github webhook 
     source URL: https://hkdk.events/6p2dgi56ltfsyz
+
+
+When you need new webhook session you can follow below steps.
+
+1-  if you can not see the Add destination button clean your site caches before entered (https://console.hookdeck.com/)
+
+2-  You need logout with your terminal. (**hookdeck logout**)
+
+3- On site click -> Add Destination -> Localhost  skip to Step 2 because we did Step 1 before. Follow steps on site.
+
+4- (**hookdeck login --cli-key 1s99ao5v4peq7ofu0x0nmnhbdzl08982aradfcby1h4hts**)
+
+5- (hookdeck listen [port] Source)  --> (**hookdeck listen 8071 Source**)
+    8071 our configserver port
+
+    Source URL: https://hkdk.events/ugjfuhsnrtsk05
+
+
+
+
