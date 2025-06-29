@@ -1,0 +1,19 @@
+server: # Server configurations
+  port: 8070 # The port on which the server will listen for requests
+
+eureka: # Eureka client and server configurations
+  instance: # Configuration specific to this application's Eureka instance
+    hostname: localhost # The hostname that this instance will use when registering with Eureka.
+                        # 'localhost' is typically used for development/testing, but should be a real hostname or IP in production.
+                        # in our individual microservices like accounts, loans and cards this value should be true
+  client: # Configuration for the Eureka client (this application)
+    fetchRegistry: false # Indicates whether this client should fetch the registry information from the Eureka server.
+                         # 'false' is typically used for a Eureka server itself, or a standalone application that doesn't need to discover other services.
+    registerWithEureka: false # Indicates whether this client should register itself with the Eureka server.
+                              # 'false' is typically used for a Eureka server itself, as it doesn't need to register with another server,
+                              # or for an application that is not a microservice and doesn't need to be discovered.
+    serviceUrl: # A map of Eureka server URLs to connect to
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ # The URL of the Eureka server to which this client will connect.
+                                                                           # It uses placeholders to dynamically construct the URL based on other properties.
+                                                                           # In this specific configuration, it points back to itself,
+                                                                           # which is common for a standalone Eureka server application.
